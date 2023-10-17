@@ -4,9 +4,7 @@ import Search from "./Search";
 import SearchResults from "./SearchResults";
 
 function App() {
-const [searchResults, setSearchResults] = useState([]);
-
-searchResults.map((e) => console.log(e))
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
     <div className="app">
@@ -16,11 +14,8 @@ searchResults.map((e) => console.log(e))
         alt="nasaLogo"
       />
       <Search setSearchResults={setSearchResults} />
-      <SearchResults />
-
+      <SearchResults results={searchResults} />
     </div>
-
-    
   );
 }
 
